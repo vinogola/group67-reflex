@@ -7,8 +7,9 @@ Rider) move an order from request to delivery. The differentiator is doubled sca
 confirmation: the rider scans once at pickup, once at delivery, and each scan traces back to
 the exact order and rider who made it.
 
-> Built as a learning project (PLP), Group 67. Architecture is locked. The build hasn't
-> started yet.
+> Built as a learning project (PLP), Group 67. Architecture is locked. The AI Studio build
+> is live with a working demo — Retailer, Dispatcher, and Rider flow through a full order
+> end-to-end.
 
 ## System design
 
@@ -25,14 +26,20 @@ Full ERD and request-flow diagrams: [docs/system-design.md](docs/system-design.m
 
 ## Tech stack
 
-Google AI Studio's Build mode, going with Cloud SQL for the relational database and Firebase
-Authentication for the three roles. The data model needs five related tables, foreign keys,
-one-to-many relationships running three different directions, and separate logins for three
-roles - this isn't a single-user prototype. AI Studio also offers Firestore, but that's
-document-based and would mean reshaping the locked ERD into collections instead of relational
-tables.
+Google AI Studio's Build mode, going with Cloud SQL for the relational database. Auth is
+Firebase Authentication with one account type and a role field (retailer, dispatcher,
+rider) controlling what each user sees, not three separate login flows. The data model
+needs five related tables, foreign keys, and one-to-many relationships running three
+different directions - this isn't a single-user prototype. AI Studio also offers Firestore,
+but that's document-based and would mean reshaping the locked ERD into collections instead
+of relational tables.
 
 ## Status
 
-Data model, ERD, and stack are locked. No code yet. The AI Studio build starts next.
-Deadline Monday, 2026-08-31.
+Data model, ERD, and stack are locked. AI Studio build is live with a working demo:
+https://ais-pre-k3jgpmphvtedm2g7s3pcxq-189625202835.europe-west2.run.app
+(`docs/system-design.md` has the one confirmed deviation, `Scan.scanned_at`). Schema
+verified at the API level against the ERD; Cloud SQL-level confirmation from Owen still
+pending. Auth is designed (one account + role field) but not yet implemented — the demo's
+persona switching is currently unauthenticated. Two PRs open (trade-off log, demo script),
+not yet merged to `main`. Deadline Monday, 2026-08-31.
