@@ -1,7 +1,7 @@
 # 🎬 Deliverable 4: Demo Script & Solution Walkthrough
 **Owner:** Owen (Reveal / Solution & Demo Lead)  
 **Team:** Group 67 (Reflex)  
-**Live Demo Link:** https://ais-dev-k3jgpmphvtedm2g7s3pcxq-189625202835.europe-west2.run.app  
+**Live Demo Link:** ais-pre-k3jgpmphvtedm2g7s3pcxq-189625202835.europe-west2.run.app  
 
 ---
 
