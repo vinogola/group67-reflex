@@ -84,3 +84,7 @@ the rider who performed it. Not a claim in the pitch deck. Something you can act
   specified above. Kept deliberately: it lets delivery duration be computed
   (delivery scan time minus pickup scan time) and removes any ambiguity about
   which of the two Scan rows happened first. Confirmed acceptable 2026-08-31.
+- **users (Auth Mapping)** — implements the locked one-account-plus-role-field
+  auth design (id, uid, email, role, FKs to retailer/dispatcher/rider,
+  created_at). Not in the original 5-entity ERD; schema exists, login flow is
+  not yet wired up. Confirmed 2026-08-31.
