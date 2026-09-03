@@ -38,8 +38,10 @@ of relational tables.
 
 Data model, ERD, and stack are locked. AI Studio build is live with a working demo:
 https://ais-pre-k3jgpmphvtedm2g7s3pcxq-189625202835.europe-west2.run.app
-(`docs/system-design.md` has the one confirmed deviation, `Scan.scanned_at`). Schema
-verified at the API level against the ERD; Cloud SQL-level confirmation from Owen still
-pending. Auth is designed (one account + role field) but not yet implemented — the demo's
-persona switching is currently unauthenticated. Two PRs open (trade-off log, demo script),
-not yet merged to `main`. Deadline Monday, 2026-08-31.
+(`docs/system-design.md` has both confirmed deviations, `Scan.scanned_at` and the `users`
+auth-mapping table). Schema verified at both the API level and directly against the real
+Cloud SQL schema. Auth is designed (one account + role field) but not yet implemented. The
+demo's persona switching is currently unauthenticated, a known and disclosed limitation, not
+an oversight. Trade-off log (`tradeoffs.md`) and demo script (`docs/demo-script.md`) are both
+merged to `main`. Deadline is Friday, 2026-09-04, 11:59 PM EAT. Submission is a recorded
+walkthrough (group leader presents), not a live panel.
