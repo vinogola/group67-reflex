@@ -43,5 +43,5 @@ auth-mapping table). Schema verified at both the API level and directly against 
 Cloud SQL schema. Auth is designed (one account + role field) but not yet implemented. The
 demo's persona switching is currently unauthenticated, a known and disclosed limitation, not
 an oversight. Trade-off log (`tradeoffs.md`) and demo script (`docs/demo-script.md`) are both
-merged to `main`. Deadline is Friday, 2026-09-04, 11:59 PM EAT. Submission is a recorded
+merged to `main`. Deadline is Saturday, 2026-09-05, 11:59 PM EAT. Submission is a recorded
 walkthrough (group leader presents), not a live panel.
